@@ -1,0 +1,84 @@
+@use 'variaveis';
+
+.sessao1 {
+    padding: 5.6vw;
+    min-height: 80vh;
+    background-image: url(../images/Django_OldFlix_resized1_resized2.jpg);
+    text-align: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+
+    @media (max-width: 768px) {
+        background-image: url(../images/Django_OldFlix_resized1_resized2.jpg);
+        padding-top: calc(50vw + 25px);
+        background-size: contain;
+        background-repeat: no-repeat;
+        margin-top: -55px;
+        display: flex;
+        justify-content: center;
+        
+        
+        
+    }
+
+    &__pistoleiro {
+
+        &__h1 {
+            color: variaveis.$corTextoSecundario;
+            font-size: 2em; /* Aumenta o tamanho do texto em 2 vezes */
+            text-align: right; /* Alinha o texto à direita */
+            margin-top: 120vh; /* Centraliza verticalmente (ajuste conforme necessário) */
+            /* Outras propriedades de estilo para o texto, se necessário */
+            position: relative;
+            top: 0; /* Alinha o texto no topo */
+            right: 0; /* Alinha o texto à direita */
+            margin: 0; /* Remove margens padrão */
+
+            @media (max-width: 768px) {
+                display: block;
+                max-width: 245px;
+                align-items: center;
+                text-align: center;
+            }
+        }
+
+        &__h2 {
+            color: variaveis.$corTextoSecundario;
+            font-size: 2em; /* Aumenta o tamanho do texto em 2 vezes */
+            text-align: right; /* Alinha o texto à direita */
+            margin-top: 50vh; /* Centraliza verticalmente (ajuste conforme necessário) */
+            /* Outras propriedades de estilo para o texto, se necessário */
+            position: relative;
+            top: 0; /* Alinha o texto no topo */
+            right: 0; /* Alinha o texto à direita */
+            margin: 0;
+
+            @media (max-width: 768px) {
+                display: block;
+                max-width: 245px;
+            }
+        
+        
+    }
+
+        .button {
+            float: right;
+            max-width: 320px;
+            width: 100%;
+            height: 60px;
+            font-size: 18px;
+            background-color: variaveis.$corTextoPrincipal;
+            color: variaveis.$corDeFundo;
+            &:hover {
+                background-color: lighten(variaveis.$corDeFundoBotaoPrimario, 3%);
+                color: variaveis.$corTextoPrincipal;
+            }
+            cursor: pointer;//alteração
+
+            @media (max-width: 768px) {
+                display: block;
+                max-width: 245px;
+            }
+        }
+    }
+}
